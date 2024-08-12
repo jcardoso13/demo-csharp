@@ -108,6 +108,8 @@ namespace TechInfoSystems.Data.SQLite
 
 			// Initialize SqliteConnection.
 			ConnectionStringSettings connectionStringSettings = ConfigurationManager.ConnectionStrings [config ["connectionStringName"]];
+	
+   			string conn = "Persist Security Info=False;User ID=admin;Password=admin;Initial Catalog=AdventureWorks;Server=MySqlServer";
 
 			if (connectionStringSettings == null || String.IsNullOrEmpty (connectionStringSettings.ConnectionString)) {
 				throw new ProviderException ("Connection String is empty for SQLiteProfileProvider. Check the web configuration file (web.config).");
